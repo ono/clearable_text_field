@@ -35,5 +35,5 @@ Git clone or you can download "zipped file":http://ononoma.appspot.com/clearable
 
 h2. Contributors
 
-"Tatsuya Ono":http://github.com/ono
-Go Kameda
+Tatsuya Ono: me :)
+Go Kameda: designed default icon.
