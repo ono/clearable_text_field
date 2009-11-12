@@ -1,0 +1,39 @@
+h2. Clearable Text Field - jQuery Plugin
+
+Clearable Text Field is a jQuery plugin which shows up a cross icon to clear value when user input something in a form field.
+Seeing example is the fastest way to understand. "Example":http://ononoma.appspot.com/clearable_text_field/example/
+
+h2. FAQ
+
+h3. Selector examples
+
+<pre><code>
+// All text fields
+$('input[type=text]').clearableTextField();
+
+// All text fields in search form
+$('div.search input[type=text]').clearableTextField();
+
+// All text fields but foo class
+$('input:not(.foo)[type=text]').clearableTextField();
+</code></pre>
+
+h3. Can I change the cross image and the style?
+
+Yes, you can. Edit jquery.clearableTextField.css.
+
+h3. Browser compatibility
+
+I've tested with:
+* Safari4, FF3.5 on OS X
+* IE6, IE7, IE8, FF3.5 on win XP
+
+h3. Download
+
+Git clone or you can download "zipped file":http://ononoma.appspot.com/clearable_text_field.zip
+
+h2. Contributors
+
+Tatsuya Ono: Main developer
+Go Kameda: Default icon design
+

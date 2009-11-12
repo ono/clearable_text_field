@@ -1,0 +1,3 @@
+
+div.text_clear_button { background:url(clear_cross.png); width:11px; height:11px; margin:0; padding:0;
+  z-index:2; position:absolute; cursor:pointer; }
