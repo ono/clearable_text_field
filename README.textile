@@ -2,6 +2,7 @@ h2. Clearable Text Field - jQuery Plugin
 
 Clearable Text Field is a jQuery plugin which shows up a cross icon to clear value when user input something in a form field.
 Seeing example is the fastest way to understand. "Example":http://ononoma.appspot.com/clearable_text_field/example/
+!http://ononoma.appspot.com/clearable_text_field/example/screen_shot.png!
 
 h2. FAQ
 
@@ -34,6 +35,5 @@ Git clone or you can download "zipped file":http://ononoma.appspot.com/clearable
 
 h2. Contributors
 
-Tatsuya Ono: Main developer
-Go Kameda: Default icon design
-
+"Tatsuya Ono":http://github.com/ono
+Go Kameda
