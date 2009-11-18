@@ -1,5 +1,5 @@
  /*
-  * Clearable Text Field - jQuery plugin version 0.1
+  * Clearable Text Field - jQuery plugin version 0.2
   * Copyright (c) 2009 Tatsuya Ono
   *
   * http://github.com/ono/clearable_text_field
