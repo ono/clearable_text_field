@@ -30,11 +30,11 @@
   }
   
   function add_clear_button(input) {
-    if (input.parent().children('div.text_clear_button').length==0) {
+    if (!input.next().hasClass('text_clear_button')) {
       // appends div
-      input.parent().append("<div class='text_clear_button'></div>");
+      input.after("<div class='text_clear_button'></div>");
     
-      var clear_button = input.parent().children('div.text_clear_button');
+      var clear_button = input.next();
       var w = clear_button.outerHeight(), h = clear_button.outerHeight();
       
       input.css('padding-right', parseInt(input.css('padding-right')) + w + 1);
@@ -56,9 +56,9 @@
   }
   
   function remove_clear_button(input) {
-    var clear_button = input.parent().children('div.text_clear_button');
+    var clear_button = input.next();
     
-    if (clear_button.length>0) {
+    if (clear_button.hasClass('text_clear_button')) {
       clear_button.remove();
       var w = clear_button.width();
 
