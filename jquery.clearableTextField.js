@@ -1,5 +1,5 @@
  /*
-  * Clearable Text Field - jQuery plugin version 0.2
+  * Clearable Text Field - jQuery plugin version 0.2.1
   * Copyright (c) 2009 Tatsuya Ono
   *
   * http://github.com/ono/clearable_text_field
@@ -13,7 +13,9 @@
     if ($(this).length>0) {
       $(this).bind('keyup change paste cut', onSomethingChanged);
     
-      trigger($(this));
+      for (var i=0; i<$(this).length; i++) {
+        trigger($($(this)[i]));
+      }
     }
   }
   
