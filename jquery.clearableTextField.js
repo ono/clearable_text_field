@@ -53,6 +53,7 @@
       clear_button.click(function(){
         input.val('');
         trigger(input);
+        input.change();
       });
     }
   }
