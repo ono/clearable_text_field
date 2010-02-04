@@ -1,0 +1,1 @@
+java -jar ~/Downloads/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar jquery.clearableTextField.js -o jquery.clearableTextField.min.js
