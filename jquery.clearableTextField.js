@@ -20,19 +20,21 @@
   }
   
   function onSomethingChanged() {
-    trigger($(this));
+    trigger($(this), true);
   }
   
-  function trigger(input) {
+  function trigger(input, set_focus) {
     if(input.val().length>0){
-      add_clear_button(input);
+      add_clear_button(input, set_focus);
     } else {
       remove_clear_button(input);
     }    
   }
   
-  function add_clear_button(input) {
+  function add_clear_button(input, set_focus) {
     if (!input.next().hasClass('text_clear_button')) {
+      var wrap = input.wrap('<div style="margin:0;padding:0;position:relative; display:inline;" />')
+      
       // appends div
       input.after("<div class='text_clear_button'></div>");
     
@@ -55,6 +57,8 @@
         trigger(input);
         input.change();
       });
+      
+      if (set_focus && set_focus!=undefined) input.focus();
     }
   }
   
