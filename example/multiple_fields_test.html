@@ -18,6 +18,7 @@
 	  <h1>Example</h1>
 	  
 	  <div class="form">
+	    <div class="test">test</div>
 	    <label for="bar">Input something here 1</label>:
 	    <input type="text" class="test" value="aa" id="bar" name="bar" /><br/>
 	    <label for="bar">Input something here 2</label>:
@@ -36,7 +37,9 @@
 	  </p>
 	  <script type="text/javascript">
 	    $(document).ready(function(){
+        $('div.test').hide();
 	      $('input[type=text]').clearableTextField();
+        $('div.test').show();
 	    });
 	  </script>
 	</body>
