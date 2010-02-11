@@ -13,9 +13,11 @@
     if ($(this).length>0) {
       $(this).bind('keyup change paste cut', onSomethingChanged);
     
-      for (var i=0; i<$(this).length; i++) {
-        trigger($($(this)[i]));
-      }
+      $(this).each( function(){
+        $(this).data('original-padding-right', $(this).css('padding-right'));
+        $(this).data('original-width', $(this).width());
+        trigger($(this));
+      });      
     }
   }
   
@@ -33,7 +35,10 @@
   
   function add_clear_button(input, set_focus) {
     if (!input.next().hasClass('text_clear_button')) {
-      var wrap = input.wrap('<div style="margin:0;padding:0;position:relative; display:inline;" />')
+      var wrap = input.parent();
+      if (!wrap.hasClass('clear_button_wrapper')) {
+        wrap = input.wrap('<div class="clear_button_wrapper" style="margin:0;padding:0;position:relative; display:inline;" />');
+      }
       
       // appends div
       input.after("<div class='text_clear_button'></div>");
@@ -41,7 +46,7 @@
       var clear_button = input.next();
       var w = clear_button.outerHeight(), h = clear_button.outerHeight();
       
-      input.css('padding-right', parseInt(input.css('padding-right')) + w + 1);
+      input.css('padding-right', parseInt(input.data('original-padding-right')) + w + 1);
       input.width(input.width() - w - 1);
           
       var pos = input.position();
@@ -69,8 +74,8 @@
       clear_button.remove();
       var w = clear_button.width();
 
-      input.css('padding-right', parseInt(input.css('padding-right')) - w -1);
-      input.width(input.width() + w + 1);
+      input.css('padding-right', parseInt(input.data('original-padding-right')));
+      input.width(input.data('original-width'));
     }
 
     if (set_focus && set_focus!=undefined) input.focus();
