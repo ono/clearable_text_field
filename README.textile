@@ -29,7 +29,7 @@ I've tested with:
 
 h3. Download
 
-Git clone or you can download "zipped file":http://ononoma.appspot.com/clearable_text_field.zip
+Just git clone or "download source" link above.
 
 h2. Contributors
 
