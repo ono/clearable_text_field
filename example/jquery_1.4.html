@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Clearable Text Field : Exapmle</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="../jquery.clearableTextField.js"></script>
+		<link rel="stylesheet" href="../jquery.clearableTextField.css" type="text/css" />
+
+    <style type="text/css">
+      body { font-family:'georgia','bitstream vera serif',serif; }
+      h1 {font-size:3.0em;}
+      div.form {margin:10px; padding:20px; background:#eee;}
+      div.code {margin:10px; padding:20px; background:#eef;}
+    </style>
+	</head>
+	<body>
+	  <h1>Example</h1>
+	  
+	  <div class="form">
+	    <div class="test">test</div>
+	    <label for="foo">Input something here 1</label>:
+	    <input type="text" class="test" value="aa" id="foo" name="foo" style="padding-right:10px" /><br/>
+	    <label for="bar">Input something here 2</label>:
+	    <input type="text" class="test" value="bb" id="bar" name="bar" />
+	  </div>
+	  <div class="code">
+	    Code:<br/>
+<pre>
+  $(document).ready(function(){
+    $('input[type=text]').clearableTextField();
+  });
+</pre>
+    </div>
+    <p>
+	    <a href="http://github.com/ono/clearable_text_field">GitHub</a>
+	  </p>
+	  <script type="text/javascript">
+	    $(document).ready(function(){
+        $('div.test').hide();
+	      $('input[type=text]').clearableTextField();
+        $('div.test').show();
+	    });
+	  </script>
+	</body>
+</html>

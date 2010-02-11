@@ -27,6 +27,10 @@ I've tested with:
 * Safari4, FF3.5 on OS X
 * IE6, IE7, IE8, FF3.5 on win XP
 
+h3. jQuery version
+
+I've tested with 1.3 and 1.4
+
 h3. Download
 
 Just git clone or "download source" link above.
