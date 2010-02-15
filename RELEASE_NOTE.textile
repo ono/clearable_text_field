@@ -1,0 +1,5 @@
+h3. version 0.3.2
+
+* Released 15th February
+
+Fixed the issue on WebKit base browser #1
