@@ -1,5 +1,5 @@
  /*
-  * Clearable Text Field - jQuery plugin version 0.3.1
+  * Clearable Text Field - jQuery plugin version 0.3.2
   * Copyright (c) 2009 Tatsuya Ono
   *
   * http://github.com/ono/clearable_text_field
@@ -34,7 +34,8 @@
   }
   
   function add_clear_button(input, set_focus) {
-    if (!input.next().hasClass('text_clear_button')) {
+    if (input.attr('has_clearable_button')!="1") {
+      input.attr('has_clearable_button',"1");
       var wrap = input.parent();
       if (!wrap.hasClass('clear_button_wrapper')) {
         wrap = input.wrap('<div class="clear_button_wrapper" style="margin:0;padding:0;position:relative; display:inline;" />');
@@ -70,7 +71,8 @@
   function remove_clear_button(input, set_focus) {
     var clear_button = input.next();
     
-    if (clear_button.hasClass('text_clear_button')) {
+    if (input.attr('has_clearable_button')=="1") {
+      input.removeAttr('has_clearable_button');
       clear_button.remove();
       var w = clear_button.width();
 
